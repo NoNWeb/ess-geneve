@@ -9,44 +9,51 @@
 
   <!-- Slider -->
   <div class="slotholder-slider">
-    <?php putRevSlider('slider_fr_fullscreen', 'homepage'); ?>
+    <?php //putRevSlider('slider_fr_fullscreen', 'homepage'); ?>
   </div>
   <!-- /Slider -->
 
   <!-- Container -->
     <!-- Activites -->
     <!-- <div class="row"> -->
-    <section class="row" id="nos_activites">
-      <div class="small-6 large-centered columns">
-        <h1>Nos Activites</h1>
-        <hr>
-        <p class="introduction">
-          Skieur, snowboardeur, petits et grands, débutant ou expert? <br>Venez partager avec nous la passion de la glisse et de la montagne!
-        </p>
+    <section class="grid grid-pad" id="nos_activites">
+      <div class="col-1-3"></div>
+
+      <div class="col-1-3">
+        <div class="content">
+          <h1>Nos Activites</h1>
+          <hr>
+          <p class="introduction">
+            Skieur, snowboardeur, petits et grands, débutant ou expert? <br>Venez partager avec nous la passion de la glisse et de la montagne!
+          </p>
+        </div>
       </div>
 
-      <!-- <hr> -->
+      <div class="col-1-3"></div>
 
-      <div class="activites row">
-        
+
+      <ul class="grid grid-pad">
+
         <?php
           $args = array( 'post_type' => 'activites', 'post_per_page' => 5 );
           $loop = new WP_Query( $args );
           if ( $loop->have_posts() ):
             while( $loop->have_posts() ): $loop->the_post(); ?>
-              <div class="box small-12 medium-2">
-                <a href="#">
-                  <?php the_post_thumbnail('array(220, 330)'); ?>
-                </a>
-                <span><?php the_title(); ?></span>
-                <p>
-                  <?php the_excerpt(); ?>
-                </p>
-              </div>
+              <li class="box col-1-5">
+                <div class="content">
+                  <a href="#">
+                    <?php the_post_thumbnail(); ?>
+                  </a>
+                  <h4><a href="#"><?php the_title(); ?></a></h4>
+                  <span>
+                    <?php echo get_activities_excerpt(); ?>
+                  </span>
+                </div>
+              </li>
             <?php endwhile;
           endif;
         ?>
-      </div>
+      </ul>
     </section>
     <!-- </div> -->
 

@@ -17,6 +17,6 @@
   <p> Conception graphique et developpement par <a href="http://no-n.com" target="_blank">No-N</a> </p>
 </footer> -->
 
-<?php //wp_footer(); ?>
+<?php wp_footer(); ?>
 </body><!-- END PAGE BODY -->
 </html>

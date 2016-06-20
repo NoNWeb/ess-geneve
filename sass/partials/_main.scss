@@ -15,14 +15,95 @@
   }
   .introduction{
     text-align: center;
-    font-size: 1rem;
+    // text-align: justify;
+    font-size: .9rem;
     font-weight: 300;
   }
-  .activites{
-    float: left;
-    .box{
-      // width: 20%;
-      // float: left;
+  li{
+    min-height: 450px;
+    // background-color: green;
+    list-style: none;
+    text-align: center;
+    color: $gris_text;
+    display: inline-block;
+    margin: 0;
+    // padding: 0;
+    text-align: center;
+    position: relative;
+    .content{
+      height: 270px;
+      padding: .5rem 0;
+      border: 1px $gris_border solid;
+      position: relative;
+      overflow: hidden;
+      @include transition-property(all);
+      @include transition-timing-function (ease-in-out);
+      @include transition-duration(.3s);
+      @include transform(scale(1));
+      &:hover{
+        height: 400px;
+        cursor: pointer;
+        @include transform(scale(1.1));
+        // padding: 0;
+        span{
+          display: block;
+        }
+      }
+      a{
+        text-decoration: underline;
+        img{
+          align-content: center;
+          width: 180px;
+          height: 180px;
+          // padding: 2rem;
+        }
+      }
+      h4{
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 500;
+        // letter-spacing: .15rem;
+        // background-color: green;
+        // min-height: 30px;
+        vertical-align: middle;
+        a{
+          text-decoration: none;
+          color: $gris_text;
+        }
+      }
+      span{
+        font-size: .9rem;
+        // line-height: .03rem;
+        font-weight: lighter;
+        // word-spacing: .05rem;
+        padding: 0 .3rem;
+        letter-spacing: .001rem;
+        height: 95px;
+        // background-color: green;
+        display: none;
+      }
+      .inscr_detail{
+        position: absolute;
+        bottom: .1rem;
+        margin: 0 auto;
+        width: 100%;
+        // left: ;
+        // text-align: center;
+        font-size: .85rem;
+        font-weight: normal;
+        line-height: 2rem;
+        a{
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $gris_text;
+          // @include transition-property(all);
+          // @include transition-duration(.3s);
+          &:hover{
+            color: lighten($gris_text, 20);
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

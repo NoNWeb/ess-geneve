@@ -23,3 +23,17 @@ function ess_activate_features(){
 
 }
 add_action('after_setup_theme', 'ess_activate_features');
+
+
+/* Ess-geneve excerpt limit for all activities */
+function get_activities_excerpt(){
+  $excerpt = get_the_content();
+  $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+  $excerpt = strip_shortcodes($excerpt);
+  $excerpt = strip_tags($excerpt);
+  $excerpt = substr($excerpt, 0, 100);
+  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+  $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+  $excerpt = $excerpt.'<br><div class="inscr_detail"><a href="'.$permalink.'">Details</a> - <a href="#">Inscription</a></div>';
+  return $excerpt;
+}

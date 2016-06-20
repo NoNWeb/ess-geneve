@@ -16,6 +16,7 @@
   <!-- Container -->
     <!-- Activites -->
     <!-- <div class="row"> -->
+  <div class="grid grid-pad">
     <section class="grid grid-pad" id="nos_activites">
       <div class="col-1-3"></div>
 
@@ -57,22 +58,24 @@
     </section>
     <!-- </div> -->
 
-    <section id="partenaires" class="row">
-      <ul class="expanded row">
+    <section id="partenaires" class="col-1-1">
+      <ul class="grid grid-pad">
         <?php
           $args = array( 'post_type' => 'partenaires' );
           $loop = new WP_Query( $args );
           if ( $loop->have_posts() ):
             while( $loop->have_posts() ): $loop->the_post(); ?>
-              <li>
-                <?php the_post_thumbnail(array(120, 120)); ?>
-              </li>
+              <div class="content">
+                <li class="col-1-4">
+                  <?php the_post_thumbnail(array(120, 120)); ?>
+                </li>
+              </div>
             <?php endwhile;
           endif;
         ?>
       </ul>
     </section>
-
+  </div>
     <!-- /Activites -->
     <!-- Partners -->
 

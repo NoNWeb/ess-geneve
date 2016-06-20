@@ -730,6 +730,17 @@ html {
   cursor: pointer;
 }
 
+/* line 111, ../sass/partials/_main.scss */
+#partenaires ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 114, ../sass/partials/_main.scss */
+#partenaires ul li {
+  list-style: none;
+  display: inline-block;
+}
+
 /*
   FOOTER
   ________________________________________________________________________________

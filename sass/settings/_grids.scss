@@ -1,0 +1,32 @@
+// Requirements
+// ================
+
+@import 'susy';
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  // column-width: 40px,
+  output: float,
+  gutter-position: inside,
+  // flow: flr,
+  // container: auto,
+  // container-position: center,
+  // last-flow: to,
+  // global-box-sizing: border-box,
+  // debug: (
+  //   image: show,
+  //   color: rgba(#656, .25),
+  //   output: background,
+  //   toggle: top right,
+  // ),
+  // use-custom: (
+  //   background-image: true,
+  //   background-options: false,
+  //   box-sizing: true,
+  //   clearfix: false,
+  //   rem: true,
+  // )
+
+);

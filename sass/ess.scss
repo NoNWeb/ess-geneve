@@ -1,0 +1,64 @@
+/*
+  @package ESS-GENEVE theme
+*/
+
+/*===========================================================*/
+/*  Stylesheet by Mutuyimana
+/*  Stylesheet cré par Mutuyimana
+/*  mutuyimana@gmail.com
+/*  no-n.com
+/*===========================================================*/
+@charset 'utf-8';
+
+
+/*
+  IMPORT COMPASS
+  ________________________________________________________________________________
+*/
+// @import 'compass';
+// @import 'susy';
+
+// Import custmoized settings
+@import 'settings/normalize';
+@import 'settings/colors';
+@import 'settings/typography';
+@import 'settings/transitions';
+@import 'settings/buttons';
+@import 'settings/mediaQueries';
+@import 'settings/mesMexins';
+@import 'settings/generals';
+@import 'settings/layout';
+@import 'settings/grids';
+@import 'breakpoint';
+
+
+
+// Overwrites
+// ---------------------------------------------------------------------------------------
+$font-base: 16px;
+
+
+/*
+  HEADER
+  ________________________________________________________________________________
+*/
+@import 'partials/header';
+
+/*
+  SLIDER
+  ________________________________________________________________________________
+*/
+@import 'partials/slider';
+
+
+/*
+  MAIN
+  ________________________________________________________________________________
+*/
+@import 'partials/main';
+
+/*
+  FOOTER
+  ________________________________________________________________________________
+*/
+@import 'partials/footer';

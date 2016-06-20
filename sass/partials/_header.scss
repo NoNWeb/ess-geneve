@@ -1,0 +1,51 @@
+
+.top-navigation{
+  margin-top: 1rem;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  padding-right: 2rem;
+  .top-nav-left{
+    float: left;
+    a{
+      img{
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+  .slogan{
+    display: block;
+    float: right;
+    p{
+      font-size: 1.7rem;
+      font-weight: 500;
+      display: block;
+      height: 20px;
+      padding: 1rem 0 1rem .6rem;
+      // color: $blanc;
+    }
+    span{
+      margin: 0;
+      padding: .2rem .6rem;
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+  }
+  .top-nav-right{
+    float: right;
+    ul{
+      li{
+        list-style: none;
+      }
+    }
+  }
+  button{
+    float: right;
+    color: $blanc;
+  }
+}
+.slotholder-slider{
+  z-index: 1;
+  // display: none;
+}
